@@ -8,10 +8,13 @@ $params = array_merge(
 
 return [
     'id' => 'app-backend',
+    'language'=>'zh-CN',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    'modules' => [],
+    'modules' => [
+        
+    ],
     'components' => [
         'user' => [
             'identityClass' => 'common\models\User',
@@ -30,5 +33,11 @@ return [
             'errorAction' => 'site/error',
         ],
     ],
+    /* 'as access' => [
+        'class' => 'mdm\admin\components\AccessControl',
+        'allowActions' => [
+            'site/login',
+        ]
+    ], */
     'params' => $params,
 ];
